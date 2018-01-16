@@ -12,6 +12,8 @@ export class Shader {
     gl.shaderSource(this.shader, source);
     gl.compileShader(this.shader);
 
+    console.log(Math.max(0, 3, 4));
+
     if (!gl.getShaderParameter(this.shader, gl.COMPILE_STATUS)) {
       throw gl.getShaderInfoLog(this.shader);
     }
